@@ -4,7 +4,7 @@ import { launchImageLibrary} from 'react-native-image-picker';
 import axios from 'axios';
 
 
-const ImagePickerComponent = () => {
+const ImagePickerComponent = async () => {
 
     const [ selectedImage, setSelectedImage ] = useState(null);
 
