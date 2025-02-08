@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const ImagePickerComponent = () => {
 
-    const { selectedImage, setSelectedImage } = useState(null);
+    const [ selectedImage, setSelectedImage ] = useState(null);
 
     const pickImage=()=>{
         launchImageLibrary({ mediaType: 'photo'}, (response) => {
@@ -15,7 +15,7 @@ const ImagePickerComponent = () => {
             }else if(response.errorMessage){
                 Alert.alert('Error:', response.errorMessage);
         }else{
-            selectedImage(response.assets[0]);
+            setSelectedImage(response.assets[0]);
         }
         });
 };
@@ -25,7 +25,27 @@ const ImagePickerComponent = () => {
             return;
         }
 }
-    const response = await axios.post('http://')
+    const formData = new FormData();
+    formData.append('file', {
+        uri: selectedImage.uri,
+        type: selectedImage.type,
+        name: selectedImage.fileName,
+    });
+    try{
+        const response = await axios.post('http://127.0.0.1:8000/upload/', formData, {headers : {'Content-Type': 'multipart/form-data'}});
+        Alert.alert("Result :", response.data.classification );
+    }catch (error){
+        Alert.alert('Error uploading image ', error.message);
+    }
+    return(
+        <View>
+            <Button title="Select Image " onPress={pickImage}/>
+            {selectedImage && <Image source={{uri: selectedImage.uri}} style={{width: 300, height: 300}} />}
+            <Button title="Upload & Classify" onPress={uploadImage}/>
+        </View>
+    );
 
-}
+};
+
+export default ImagePickerComponent;
 
