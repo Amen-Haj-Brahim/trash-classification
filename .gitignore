@@ -2,3 +2,5 @@
 /data
 /model/data
 /model/model.h5
+/.venv
+/mobile app/model.h5
