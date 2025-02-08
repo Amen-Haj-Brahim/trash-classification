@@ -8,6 +8,8 @@
 
 https://drive.google.com/file/d/1dauOSzGE3YdlqygsyWdqOXmsuTvmIurK/view?usp=sharing
 
+#### download it and put it in "mobile app/"
+
 ### to run this
 
 ### make a python venv
