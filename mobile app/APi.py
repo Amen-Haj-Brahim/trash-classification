@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,File,UploadFile
 
 app=FastAPI()
 
@@ -6,6 +6,9 @@ app=FastAPI()
 def read_root():
     return{"message": "hello fastApi"}
 
-@app.get("/predict")
-def read_item():
-    return{}
+@app.post("/upload/")
+async def upload_file(file: UploadFile = File(...)):
+    if not file:
+        return JSONResponse(content={"error": "No file uploaded"}, status_code=400)
+    
+    return {"filename": file.filename, "content_type": file.content_type}
