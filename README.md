@@ -1,11 +1,11 @@
 # trash-classification-twise-night-challenge
 
-###classification of trash images by fine tuning vgg16 on 2 classes
-###classes=[dirty,clean]
+### classification of trash images by fine tuning vgg16 on 2 classes
+### classes=[dirty,clean]
 
-###to run this
+### to run this
 
-###make a python venv
+### make a python venv
 
 ```
 python -m venv .venv
@@ -18,7 +18,7 @@ cd Scripts
 pip install requirements.txt
 ```
 
-###and
+### and
 
 ```
 cd "mobile app"
@@ -26,17 +26,17 @@ cd "Trash_Classification"
 npm i
 ```
 
-###to start the mobile app
+### to start the mobile app
 
 ```
 npx expo start
 ```
 
-###to start the api
+### to start the api
 
 ```
 fastapi run api.py
 ```
 
-###Application demo
+### Application demo
 ![plot](./demo.png)
