@@ -1,7 +1,12 @@
 # trash-classification-twise-night-challenge
 
 ### classification of trash images by fine tuning vgg16 on 2 classes
+
 ### classes=[dirty,clean]
+
+### model link
+
+https://drive.google.com/file/d/1dauOSzGE3YdlqygsyWdqOXmsuTvmIurK/view?usp=sharing
 
 ### to run this
 
@@ -39,4 +44,5 @@ fastapi run api.py
 ```
 
 ### Application demo
+
 ![plot](./demo.png)
