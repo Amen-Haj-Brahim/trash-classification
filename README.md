@@ -4,7 +4,7 @@
 
 ### classes=[dirty,clean]
 
-### model link
+### model link because it's too big for github's max size
 
 https://drive.google.com/file/d/1dauOSzGE3YdlqygsyWdqOXmsuTvmIurK/view?usp=sharing
 
