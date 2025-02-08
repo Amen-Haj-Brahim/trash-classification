@@ -1,0 +1,5 @@
+matplotlib==3.8.0
+numpy==1.26.4
+fastapi==0.115.8
+opencv-python==4.6.0.66
+tensorflow==2.15.0
