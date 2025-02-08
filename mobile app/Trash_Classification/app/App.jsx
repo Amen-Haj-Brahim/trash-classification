@@ -5,7 +5,7 @@ import ImagePickerComponent from './ImagePicker';
 const App = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Text>🌟 App Loaded</Text>  {/* ✅ Add this to check if App.js renders */}
+      <Text> App Loaded</Text>  
       <ImagePickerComponent />
     </SafeAreaView>
   );

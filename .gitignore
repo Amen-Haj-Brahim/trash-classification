@@ -1,3 +1,5 @@
 /trash train.v2i.folder.zip
 /data
 /model/data
+/model/model.h5
+/mobile app/model.h5
